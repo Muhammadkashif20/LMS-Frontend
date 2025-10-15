@@ -1,39 +1,48 @@
 import React from "react";
+import loginIllustration from "../assets/images/download.png";
 
 const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-4xl bg-white shadow-2xl rounded-3xl overflow-hidden flex">
+    <div className="min-h-screen flex items-center justify-center px-6">
+      <div className="my-6 w-full max-w-5xl shadow-md rounded-2xl flex flex-col md:flex-row overflow-hidden">
+        
         {/* Left Side - Form */}
-        <div className="w-full md:w-1/2 p-10 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Welcome Back</h2>
-          <p className="text-gray-500 mb-8">
-            Login to continue your learning journey 🚀
+        <div className="md:w-1/2 w-full bg-white p-8 md:p-10 border-r border-gray-200">
+          <h2 className="text-3xl font-bold text-gray-800">
+            Welcome Back 👋
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            Sign in to continue your journey with{" "}
+            <span className="font-semibold text-indigo-600">LMS</span>.
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-4">
             <div>
-              <label className="block text-gray-700 mb-2 text-sm">Email</label>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Email
+              </label>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
               />
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-2 text-sm">Password</label>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Password
+              </label>
               <input
                 type="password"
                 placeholder="Enter your password"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
               />
             </div>
 
             <div className="text-right">
               <a
                 href="#"
-                className="text-sm text-indigo-600 hover:text-indigo-500"
+                className="text-xs text-indigo-600 hover:text-indigo-500 font-medium"
               >
                 Forgot password?
               </a>
@@ -41,41 +50,43 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition duration-300"
+              className="w-full py-2.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition duration-300 shadow-sm"
             >
               Login
             </button>
           </form>
 
-          <div className="flex items-center my-6">
-            <div className="flex-grow h-px bg-gray-300"></div>
-            <span className="px-3 text-gray-400 text-sm">OR</span>
-            <div className="flex-grow h-px bg-gray-300"></div>
+          {/* Divider */}
+          <div className="flex items-center my-5">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <span className="px-2 text-gray-400 text-xs">OR</span>
+            <div className="flex-grow h-px bg-gray-200"></div>
           </div>
 
-          <div className="flex gap-3">
-            <button className="flex-1 py-3 rounded-lg bg-red-50 text-red-600 border border-red-200 hover:bg-red-100 transition">
+          {/* Social Buttons */}
+          <div className="flex gap-2">
+            <button className="flex-1 py-2 rounded-md bg-red-50 text-red-600 border border-red-200 hover:bg-red-100 transition text-xs font-medium">
               Google
             </button>
-            <button className="flex-1 py-3 rounded-lg bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100 transition">
+            <button className="flex-1 py-2 rounded-md bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100 transition text-xs font-medium">
               Facebook
             </button>
           </div>
 
-          <p className="text-center text-gray-500 mt-6 text-sm">
+          <p className="text-center text-gray-500 mt-5 text-xs">
             Don’t have an account?{" "}
-            <a href="#" className="text-indigo-600 hover:text-indigo-500">
+            <a href="" className="text-indigo-600 hover:text-indigo-500 font-semibold">
               Sign Up
             </a>
           </p>
         </div>
 
-        {/* Right Side - Image/Illustration */}
-        <div className="hidden md:flex w-1/2 bg-gradient-to-br from-indigo-100 via-white to-indigo-50 items-center justify-center p-10">
+        {/* Right Side - Illustration */}
+        <div className="md:w-1/2 w-full flex justify-center items-center bg-gradient-to-br from-indigo-100 to-indigo-50 p-10">
           <img
-            src="https://cdni.iconscout.com/illustration/premium/thumb/online-learning-lecture-3985524-3299308.png"
-            alt="LMS Login"
-            className="max-w-sm w-full"
+            src={loginIllustration}
+            alt="LMS Illustration"
+            className="max-h-[350px] object-contain drop-shadow-md"
           />
         </div>
       </div>
