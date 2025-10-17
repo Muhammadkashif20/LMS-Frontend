@@ -1,5 +1,6 @@
 import React from "react";
 import loginIllustration from "../assets/images/download.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -75,9 +76,9 @@ const Login = () => {
 
           <p className="text-center text-gray-500 mt-5 text-xs">
             Don’t have an account?{" "}
-            <a href="" className="text-indigo-600 hover:text-indigo-500 font-semibold">
+            <Link to={"/signup"} className="text-indigo-600 hover:text-indigo-500 font-semibold">
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
 

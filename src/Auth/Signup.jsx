@@ -1,91 +1,138 @@
 import React from "react";
+import loginIllustration from "../assets/images/download.png";
+import { Link } from "react-router-dom";
 
-const Signup = () => {
+const SignUp = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black px-4">
-      <div className="w-full max-w-md bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 border border-gray-700">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-center text-white mb-6">
-          Create Account
-        </h2>
-        <p className="text-gray-300 text-center mb-8">
-          Join us and start your learning journey
-        </p>
+    <div className="min-h-screen flex items-center justify-center px-6 ">
+      <div className="my-6 w-full max-w-5xl shadow-md rounded-2xl flex flex-col md:flex-row overflow-hidden">
+        
+        {/* Left Side - Form */}
+        <div className="md:w-1/2 w-full bg-white p-8 md:p-10 border-r border-gray-200">
+          <h2 className="text-3xl font-bold text-gray-800">
+            Create Account ✨
+          </h2>
+          <p className="text-gray-500 text-sm mb-6">
+            Join the <span className="font-semibold text-indigo-600">LMS</span> community and start your learning journey today!
+          </p>
 
-        {/* Form */}
-        <form className="space-y-5">
-          <div>
-            <label className="block text-gray-300 mb-2 text-sm">Full Name</label>
-            <input
-              type="text"
-              placeholder="Enter your full name"
-              className="w-full px-4 py-3 rounded-lg bg-gray-900/60 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-            />
+          <form className="space-y-4">
+            {/* Full Name */}
+            <div>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Full Name
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Email
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
+              />
+            </div>
+
+            {/* Password */}
+            <div>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Password
+              </label>
+              <input
+                type="password"
+                placeholder="Create a password"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
+              />
+            </div>
+
+            {/* Confirm Password */}
+            <div>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                placeholder="Re-enter your password"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-sm"
+              />
+            </div>
+
+            {/* Role Selection */}
+            <div>
+              <label className="block text-gray-700 mb-1 text-sm font-medium">
+                Select Role
+              </label>
+              <select
+                name="role"
+                className="w-full px-3 py-2 rounded-md border border-gray-300 bg-white text-gray-700 text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Choose your role
+                </option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="admin">Admin</option>
+              </select>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full py-2.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold transition duration-300 shadow-sm"
+            >
+              Sign Up
+            </button>
+          </form>
+
+          {/* Divider */}
+          <div className="flex items-center my-5">
+            <div className="flex-grow h-px bg-gray-200"></div>
+            <span className="px-2 text-gray-400 text-xs">OR</span>
+            <div className="flex-grow h-px bg-gray-200"></div>
           </div>
 
-          <div>
-            <label className="block text-gray-300 mb-2 text-sm">Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-3 rounded-lg bg-gray-900/60 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-            />
+          {/* Social Buttons */}
+          <div className="flex gap-2">
+            <button className="flex-1 py-2 rounded-md bg-red-50 text-red-600 border border-red-200 hover:bg-red-100 transition text-xs font-medium">
+              Google
+            </button>
+            <button className="flex-1 py-2 rounded-md bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100 transition text-xs font-medium">
+              Facebook
+            </button>
           </div>
 
-          <div>
-            <label className="block text-gray-300 mb-2 text-sm">Password</label>
-            <input
-              type="password"
-              placeholder="Create a password"
-              className="w-full px-4 py-3 rounded-lg bg-gray-900/60 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-            />
-          </div>
-
-          <div>
-            <label className="block text-gray-300 mb-2 text-sm">Confirm Password</label>
-            <input
-              type="password"
-              placeholder="Confirm your password"
-              className="w-full px-4 py-3 rounded-lg bg-gray-900/60 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none"
-            />
-          </div>
-
-          {/* Button */}
-          <button
-            type="submit"
-            className="w-full py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition duration-300 shadow-md hover:shadow-lg"
-          >
-            Sign Up
-          </button>
-        </form>
-
-        {/* Divider */}
-        <div className="flex items-center my-6">
-          <div className="flex-grow h-px bg-gray-700"></div>
-          <span className="px-3 text-gray-400 text-sm">OR</span>
-          <div className="flex-grow h-px bg-gray-700"></div>
+          {/* Already have account */}
+          <p className="text-center text-gray-500 mt-5 text-xs">
+            Already have an account?{" "}
+            <Link
+              to={"/"}
+              className="text-indigo-600 hover:text-indigo-500 font-semibold"
+            >
+              Login
+            </Link>
+          </p>
         </div>
 
-        {/* Social Signup */}
-        <div className="flex gap-3">
-          <button className="flex-1 py-3 rounded-lg bg-gray-800 text-gray-300 border border-gray-700 hover:bg-gray-700 transition">
-            Google
-          </button>
-          <button className="flex-1 py-3 rounded-lg bg-gray-800 text-gray-300 border border-gray-700 hover:bg-gray-700 transition">
-            Facebook
-          </button>
+        {/* Right Side - Illustration */}
+        <div className="md:w-1/2 w-full flex justify-center items-center bg-gradient-to-br from-indigo-100 to-indigo-50 p-10">
+          <img
+            src={loginIllustration}
+            alt="LMS Illustration"
+            className="max-h-[350px] object-contain drop-shadow-md"
+          />
         </div>
-
-        {/* Login link */}
-        <p className="text-center text-gray-400 mt-6 text-sm">
-          Already have an account?{" "}
-          <a href="#" className="text-indigo-400 hover:text-indigo-300">
-            Login
-          </a>
-        </p>
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default SignUp;
